@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resources :badges
   resources :activities
 
-  get :dashboard => 'page#dashboard'
-  
+  get 'dashboard' => 'pages#dashboard'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
