@@ -4,6 +4,7 @@ gem 'rails', '4.2.5'
 
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'devise'
 
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
