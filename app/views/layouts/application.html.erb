@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
-  <title>Workspace</title>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Explore. Research. Learn. Activities and games with nature." name="description">
+  <meta content="Team Green Thumb" name="author">
+
+
+  <title>
+    <%- if content_for? :title %>
+      <%= "Green Thumb - #{yield :title}" %>
+    <%- else %>
+      <%= "Green Thumb - #{yield :title}" %>
+    <%- end %>
+  </title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  </head>
 
-</body>
+  <body id=<%= params[:controller]  %> class=<%= params[:action] %>>
+
+  <%= yield %>
+
+  </body>
+
 </html>
