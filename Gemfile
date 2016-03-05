@@ -3,9 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 gem 'devise'
 gem 'figaro'
+
+gem 'thin'
 
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
