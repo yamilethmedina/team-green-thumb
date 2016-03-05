@@ -1,22 +1,22 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-inline center"}) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :email, 'Parent Email' %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
   
     <div class="field">
     <%= f.label :childname, 'Child Name (First and Last)' %><br />
-    <%= f.text_field :childname, autofocus: true %>
+    <%= f.text_field :childname, autofocus: true, class: "form-control" %>
   </div>
   
   
   <div class="field">
     <%= f.label :birthday, 'Child Birth Date' %><br />
-    <%= f.date_select :birthday, :order => [:month, :day, :year], :start_year => 1990, autofocus: true %>
+    <%= f.date_select :birthday, :order => [:month, :day, :year], :start_year => 1990, autofocus: true, class: "form-control" %>
   </div>
   
   <div class="field">
@@ -24,16 +24,16 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "btn btn-default btn-primary" %>
   </div>
 <% end %>
 
