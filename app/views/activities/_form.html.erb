@@ -10,12 +10,40 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
     
     <div class="field">
-      <%= f.label :submission %>
+      <%= f.label :minutes %>
+      <%= f.number_field :title %>
+    </div>
+    
+    
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+    
+    
+    <div class="field">
+      <%= f.label :type %>
+      <%= f.text_field :type %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :image, 'The image we upload ourselves' %>
+      <%= f.file_field :image %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :submission, 'Images kids upload' %>
       <%= f.file_field :submission %>
     </div>
     
+
     <div class="actions">
       <%= f.submit %>
     </div>

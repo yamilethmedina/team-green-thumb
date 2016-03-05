@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305173806) do
+ActiveRecord::Schema.define(version: 20160305202514) do
 
   create_table "activities", force: :cascade do |t|
     t.datetime "created_at",              null: false
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 20160305173806) do
     t.string   "submission_content_type"
     t.integer  "submission_file_size"
     t.datetime "submission_updated_at"
+    t.string   "title"
+    t.integer  "minutes"
+    t.string   "description"
+    t.text     "type"
+    t.binary   "image"
   end
 
   create_table "badges", force: :cascade do |t|
