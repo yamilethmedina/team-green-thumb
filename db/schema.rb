@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305202514) do
+ActiveRecord::Schema.define(version: 20160305214000) do
 
   create_table "activities", force: :cascade do |t|
     t.datetime "created_at",              null: false
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20160305202514) do
     t.text     "type"
     t.binary   "image"
   end
+
+  create_table "activity_badge", id: false, force: :cascade do |t|
+    t.integer "activity_id"
+    t.integer "badge_id"
+  end
+
+  add_index "activity_badge", ["activity_id"], name: "index_activity_badge_on_activity_id"
+  add_index "activity_badge", ["badge_id"], name: "index_activity_badge_on_badge_id"
 
   create_table "badges", force: :cascade do |t|
     t.datetime "created_at", null: false

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-    has_many :activities, through: :progresses
-    has_many :badges, through: :progresses
+    has_many :activities
+    has_many :badges
+    has_many :progresses
 end

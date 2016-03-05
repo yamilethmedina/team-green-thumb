@@ -1,10 +1,16 @@
 class Progress < ActiveRecord::Base
     
-    belongs_to :user
-    belongs_to :activity
-    belongs_to :badge
+    has_one :user
+    has_one :activity
+    has_one :badge
     
-    def progress?(user)
-        Progress.where(user: user, activity: self, badge:self).exists?
-    end
+    #has one user, has one badge, has one activity
+    # one progress per activity
+    # multiple progresses for same activity, but with different badges
+    # the most important database
+    
+    
+    # def progress?(user)
+    #     Progress.where(user: user, activity: self, badge:self).exists?
+    # end
 end
