@@ -1,8 +1,8 @@
 class Progress < ActiveRecord::Base
     
-    has_one :user
-    has_one :activity
-    has_one :badge
+    belongs_to :activity
+    belongs_to :badge
+    belongs_to :user
     
     #has one user, has one badge, has one activity
     # one progress per activity

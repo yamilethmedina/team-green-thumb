@@ -27,13 +27,13 @@ ActiveRecord::Schema.define(version: 20160305214000) do
     t.binary   "image"
   end
 
-  create_table "activity_badge", id: false, force: :cascade do |t|
+  create_table "activities_badges", id: false, force: :cascade do |t|
     t.integer "activity_id"
     t.integer "badge_id"
   end
 
-  add_index "activity_badge", ["activity_id"], name: "index_activity_badge_on_activity_id"
-  add_index "activity_badge", ["badge_id"], name: "index_activity_badge_on_badge_id"
+  add_index "activities_badges", ["activity_id"], name: "index_activities_badges_on_activity_id"
+  add_index "activities_badges", ["badge_id"], name: "index_activities_badges_on_badge_id"
 
   create_table "badges", force: :cascade do |t|
     t.datetime "created_at", null: false
