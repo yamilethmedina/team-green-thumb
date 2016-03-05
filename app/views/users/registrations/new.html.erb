@@ -4,10 +4,21 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label "Parent's Email" %><br />
+    <%= f.label :email, 'Parent Email' %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
-
+  
+    <div class="field">
+    <%= f.label :childname, 'Child Name (First and Last)' %><br />
+    <%= f.text_field :childname, autofocus: true %>
+  </div>
+  
+  
+  <div class="field">
+    <%= f.label :birthday, 'Child Birth Date' %><br />
+    <%= f.date_select :birthday, :order => [:month, :day, :year], :start_year => 1990, autofocus: true %>
+  </div>
+  
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
