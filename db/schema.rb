@@ -14,8 +14,12 @@
 ActiveRecord::Schema.define(version: 20160305173806) do
 
   create_table "activities", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "submission_file_name"
+    t.string   "submission_content_type"
+    t.integer  "submission_file_size"
+    t.datetime "submission_updated_at"
   end
 
   create_table "badges", force: :cascade do |t|
