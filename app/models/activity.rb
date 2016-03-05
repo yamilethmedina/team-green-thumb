@@ -8,4 +8,5 @@ class Activity < ActiveRecord::Base
 	validates_attachment_content_type :submission, :content_type => /\Aimage\/.*\Z/
 
 	has_many :badges
+	has_many :progresses
 end

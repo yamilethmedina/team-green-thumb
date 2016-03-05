@@ -10,7 +10,32 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+      <%= f.label :badgetitle, 'Badge Name' %>
+      <%= f.text_field :badgetitle %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :badgeimage, 'Badge' %>
+      <%= f.file_field :badgeimage %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+    
+    
+    <div class="field">
+      <%= f.label :activitiestoearn, 'Activities That Help You Earn This Badge' %>
+      <%= f.text_field :activitiestoearn %>
+    </div>
+    
 
+    
+    
+    
+    
   <div class="actions">
     <%= f.submit %>
   </div>
