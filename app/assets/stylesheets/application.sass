@@ -17,6 +17,7 @@
 @import "bootstrap-sprockets", "bootstrap"
 
 $teal: #00B9AB
+$orange: #F58D38
 
 .navbar-green-thumb
   @extend .navbar-default
@@ -31,13 +32,20 @@ $teal: #00B9AB
     line-height: inherit
     margin-left: 16px // Compensating for Nav Toggle
 
-
+body#pages.index
+  background: linear-gradient(0deg, $teal, #F1DF0A)
+  background-position: bottom center
+  background-repeat: repeat-x
+  background-size: contain
+  .container
+    height: 100vh
+    background: asset_url('login_background.svg')
 
 .btn-teal
-  @include button-variant(white, #00B9AB, transparent)
+  @include button-variant(white, $teal, transparent)
 
 .btn-orange
-  @include button-variant(white, #F58D38, transparent)
+  @include button-variant(white, $orange, transparent)
 
 
 
