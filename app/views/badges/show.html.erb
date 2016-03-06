@@ -11,8 +11,14 @@
 <p><%= @badge.description %></p></div>
 
  <div class="actions">
-    <button type="button" class="btn-block">Activity 1</button>
-    <button type="button" class="btn-block">Activity 2</button>
-    <button type="button" class="btn-block">Activity 3</button>
+     
+      <% @badge.activities.each do |activity| %>
+      <tr>
+        <strong> <%= activity.title %> </strong> <%= link_to 'Show', activity, class: "btn-block" %><br>
+        
+     <% end %>
+    <!--<button type="button" class="btn-block">Activity 1</button>-->
+    <!--<button type="button" class="btn-block">Activity 2</button>-->
+    <!--<button type="button" class="btn-block">Activity 3</button>-->
 </div>
     
