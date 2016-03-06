@@ -7,10 +7,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'devise'
 gem 'figaro'
 gem 'thin'
-
 gem 'httparty'
-
-
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -28,6 +25,7 @@ group :production do
   gem 'pg' # Postgresql DB
   gem 'rails_12factor' # Heroku asset handler
 end
+
 group :development, :test do
   gem 'awesome_print'
   gem 'better_errors' # Better Errors
