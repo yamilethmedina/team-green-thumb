@@ -9,10 +9,12 @@
      
             
     <div class="actions">
-        <%= link_to '20 Minutes', activities_path(minutes: 20) %>
-    <button type="button" class="btn-block">10 Minutes</button>
-    <button type="button" class="btn-block">20 Minutes</button>
-    <button type="button" class="btn-block">Half Hour</button>
+        <%= link_to '10 Minutes', activities_path(minutes: 10), class: "btn-block" %>
+        <%= link_to '20 Minutes', activities_path(minutes: 20), class: "btn-block" %>
+        <%= link_to 'Half Hour', activities_path(minutes: 30), class: "btn-block" %>
+    <!--<button type="button" class="btn-block">10 Minutes</button>-->
+    <!--<button type="button" class="btn-block">20 Minutes</button>-->
+    <!--<button type="button" class="btn-block">Half Hour</button>-->
     </div>
 
     

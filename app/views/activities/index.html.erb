@@ -14,8 +14,8 @@
   <tbody>
     <% @activities.each do |activity| %>
       <tr>
-        <strong> <%= activity.title %> </strong><br>
-        <td><%= link_to 'Show', activity %></td>
+        <strong> <%= activity.title %> </strong> <%= link_to 'Show', activity %><br>
+        
         
       </tr>
     <% end %>
