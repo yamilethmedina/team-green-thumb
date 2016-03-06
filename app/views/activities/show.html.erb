@@ -2,14 +2,16 @@
 
 <div class="col-md-4 col-md-offset-4 text-center">
 
-<img src="../app/assets/images/flower activity icon.svg" />
+  <%= image_tag 'flower activity icon.svg', height: '300px' %>
 
-<h3><%= @activity.title %></h3>
+<h3 title=""><%= @activity.title %></h3>
 
 
-  <p>ACTIVITY LENGTH: <%= @activity.minutes %> minutes</p>
+  <p>
+    <span class="glyphicon glyphicon-time"></span>
+    <%= @activity.minutes %> minutes</p>
 
-<p><%= @activity.description %></p>
+<p><%= @activity.description.html_safe %></p>
 
 <!--kids submit image, post to correct route -->
 

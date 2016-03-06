@@ -9,7 +9,7 @@
       </button>
 
       <% if request['action'] == 'index' %>
-        <%= link_to 'The Green Thumb', root_path, class: 'navbar-brand' %>
+        <%= link_to 'The Green Thumb', root_path, class: 'navbar-brand', style:'visible: hidden' %>
       <% elsif request['action'] == 'edit' %>
         <%= link_to :back, class: 'navbar-brand' do %>
           <span class="glyphicon glyphicon-menu-left">
