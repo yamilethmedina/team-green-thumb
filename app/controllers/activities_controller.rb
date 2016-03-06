@@ -74,8 +74,7 @@ class ActivitiesController < ApplicationController
         @result = JustVisual.lookup(@activity.submission.url)
         format.html { render :submission, notice: 'Activity was successfully updated.' }
       else
-        format.html { render :edit }
-        format.json { render json: @activity.errors, status: :unprocessable_entity }
+        format.html { render :show }
       end
     end
 
