@@ -72,7 +72,6 @@ class ActivitiesController < ApplicationController
     respond_to do |format|
       if @activity.update(activity_params)
         @result = JustVisual.lookup(@activity.submission.url)
-        binding.pry
         format.html { render :submission, notice: 'Activity was successfully updated.' }
       else
         format.html { render :edit }

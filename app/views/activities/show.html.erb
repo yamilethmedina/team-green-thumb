@@ -4,14 +4,14 @@
 
   <%= image_tag 'flower activity icon.svg', height: '300px' %>
 
-<h3><%= @activity.title %></h3>
+<h3 title=""><%= @activity.title %></h3>
 
 
   <p>
     <span class="glyphicon glyphicon-time"></span>
     <%= @activity.minutes %> minutes</p>
 
-<p><%= @activity.description %></p>
+<p><%= @activity.description.html_safe %></p>
 
 <!--kids submit image, post to correct route -->
 
