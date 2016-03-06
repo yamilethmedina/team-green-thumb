@@ -17,11 +17,11 @@
              multipart: true, method: :post,
              html: {class: "form-inline center"} do |f| %>
 
-  <%= f.file_field :submission, html: {accept: "image/*;capture=camera"} %>
+  <%= f.file_field :submission, html: {accept: "image/*;capture=camera"} %><br><br>
   <%= f.submit %>
 
 <% end %>
 
-<%= link_to 'Back', activities_path %>
+
 
 </div>

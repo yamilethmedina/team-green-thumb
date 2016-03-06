@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h3><%= @badge.badgetitle %></h3>
 
 <div class="col-md-4 col-md-offset-4 text-center">
-    
-<img src="http://s3.amazonaws.com/commendablekids.com.prod/badges/43/large.png" />
+    <%= image_tag @badge.badge_icon.url(:medium) %>
+
+        <h3><%= @badge.badgetitle %></h3>
+
 
 <div id="description">
 <p><%= @badge.description %></p></div>
@@ -15,4 +16,3 @@
     <button type="button" class="btn-block">Activity 3</button>
 </div>
     
-<%= link_to 'Back', badges_path %>
