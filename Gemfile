@@ -6,8 +6,9 @@ gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
 gem 'devise'
 gem 'figaro'
-
 gem 'thin'
+
+gem 'httparty'
 
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'

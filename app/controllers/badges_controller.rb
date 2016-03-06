@@ -70,6 +70,6 @@ class BadgesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def badge_params
       # params[:badge]
-      params.require(:badge).permit(:badgetitle, :badgeimage, :description, :activitiestoearn)
+      params.require(:badge).permit(:badge_icon, :badgetitle, :badgeimage, :description, :activitiestoearn)
     end
 end
