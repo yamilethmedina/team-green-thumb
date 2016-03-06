@@ -21,7 +21,7 @@ gem 'rails_admin'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 group :production do
-  # gem 'puma'
+  gem 'puma'
   gem 'pg' # Postgresql DB
   gem 'rails_12factor' # Heroku asset handler
 end
