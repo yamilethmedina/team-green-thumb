@@ -1,13 +1,16 @@
 <p id="notice"> <%= notice %> </p>
 
-<!--<h1>Progress</h1>-->
+<h3><%= @activity.title %></h3>
 
-<p><%= debug @activity %></p>
+<div class="col-md-4 col-md-offset-4 text-center">
 
-<p>ACTIVITY LENGTH: <%= @activity.minutes %></p>
+
+<p><strong>ACTIVITY LENGTH:</strong> <%= h @activity.minutes %> minutes</p>
 
 <p><%= @activity.description %></p>
 
+<p><strong>CATEGORY:</strong> <em><%= @activity.kind %></em></p>
+]
 <!--kids submit image, post to correct route -->
 
 <%= form_for @activity, url: {:action => 'submission'},
@@ -20,3 +23,4 @@
 <% end %>
 
 <%= link_to 'Back', activities_path %>
+</div>

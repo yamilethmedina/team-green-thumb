@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160306050028) do
     t.string   "title"
     t.integer  "minutes"
     t.string   "description"
-    t.text     "type"
+    t.text     "kind"
     t.binary   "image"
   end
 
