@@ -1,40 +1,39 @@
-<h2>Sign up</h2>
+<h3>SIGN UP FOR YOUR ADVENTURE</h3>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-inline center"}) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email, 'Parent Email' %><br />
-    <%= f.email_field :email, autofocus: true, class: "form-control" %>
+  <div class="border-form-div col-md-4 col-md-offset-4">
+   
+   <div class="field">
+    <%= f.email_field :email, autofocus: true, placeholder: 'PARENT EMAIL', class: "form-control input-lg" %>
   </div>
   
     <div class="field">
-    <%= f.label :childname, 'Child Name (First and Last)' %><br />
-    <%= f.text_field :childname, autofocus: true, class: "form-control" %>
+        <%= f.text_field :childname, autofocus: true, placeholder: "CHILD'S NAME (FIRST & LAST)", class: "form-control input-lg" %>
   </div>
   
   
   <div class="field">
-    <%= f.label :birthday, 'Child Birth Date' %><br />
-    <%= f.date_select :birthday, :order => [:month, :day, :year], :start_year => 1990, autofocus: true, class: "form-control" %>
+        <%= f.date_select :birthday, :order => [:month, :day, :year], :start_year => 1990, autofocus: true, placeholder: "BIRTHDAY", class: "form-control input-lg" %>
   </div>
   
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+   
+    
+    <%= f.password_field :password, autocomplete: "off", placeholder: "PASSWORD", class: "form-control input-lg" %> <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> CHARACTERS MINIMUM)</em> <% end %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+    
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "CONFIRM PASSWORD", class: "form-control input-lg" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", class: "btn btn-default btn-primary" %>
+    <%= f.submit "LET'S GO!", class: "btn-primary btn-block" %>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+
+</div>

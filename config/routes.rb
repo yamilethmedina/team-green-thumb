@@ -4,9 +4,15 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
-
+  
+#   devise_scope :user do
+#   get '/users/sign_out' => 'devise/sessions#destroy' 
+#     get '/users/sign_up' => 'devise/registrations#new'
+#     get '/users/sign_in' => 'devise/sessions#new'
+# end
+  
   resources :progresses
-  resources :users
+  # resources :users
   resources :badges
   resources :activities
 
@@ -66,5 +72,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-
 end
