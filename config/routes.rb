@@ -1,20 +1,24 @@
 Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   root 'pages#index'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   
-#   devise_scope :user do
-#   get '/users/sign_out' => 'devise/sessions#destroy' 
-#     get '/users/sign_up' => 'devise/registrations#new'
-#     get '/users/sign_in' => 'devise/sessions#new'
-# end
+  #   devise_scope :user do
+  #   get '/users/sign_out' => 'devise/sessions#destroy'
+  #     get '/users/sign_up' => 'devise/registrations#new'
+  #     get '/users/sign_in' => 'devise/sessions#new'
+  # end
   
   resources :progresses
-  # resources :users
   resources :badges
-  resources :activities
+  resources :activities do
+    member do
+      post 'submission'
+    end
+  end
 
   get 'dashboard' => 'pages#dashboard'
 

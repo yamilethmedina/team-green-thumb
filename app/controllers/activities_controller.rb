@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :set_activity, only: [:show, :edit, :update, :destroy, :submission]
 
   # GET /activities
   # GET /activities.json
@@ -42,6 +42,7 @@ class ActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @activity.update(activity_params)
+
         format.html { redirect_to @activity, notice: 'Activity was successfully updated.' }
         format.json { render :show, status: :ok, location: @activity }
       else
@@ -59,6 +60,21 @@ class ActivitiesController < ApplicationController
       format.html { redirect_to activities_url, notice: 'Activity was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def submission
+
+    respond_to do |format|
+      if @activity.update(activity_params)
+        @result = JustVisual.lookup(@activity.submission.url)
+        binding.pry
+        format.html { render :submission, notice: 'Activity was successfully updated.' }
+      else
+        format.html { render :edit }
+        format.json { render json: @activity.errors, status: :unprocessable_entity }
+      end
+    end
+
   end
 
   private

@@ -1,15 +1,24 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"> <%= notice %> </p>
 
 <h3><%= @activity.title %></h3>
 
 <div class="col-md-4 col-md-offset-4 text-center">
 
-<p><strong>ACTIVITY LENGTH:</strong> <%= h @activity.minutes %> minutes</p>
+  <p>ACTIVITY LENGTH: <%= @activity.minutes %></p>
 
 <p><%= @activity.description %></p>
 
-<p><strong>CATEGORY:</strong> <em><%= @activity.kind %></em></p>
-
 <!--kids submit image, post to correct route -->
 
+<%= form_for @activity, url: {:action => 'submission'},
+             multipart: true, method: :post,
+             html: {class: "form-inline center"} do |f| %>
+
+  <%= f.file_field :submission, html: {accept: "image/*;capture=camera"} %>
+  <%= f.submit %>
+
+<% end %>
+
 <%= link_to 'Back', activities_path %>
+
+</div>
