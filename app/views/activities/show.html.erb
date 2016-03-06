@@ -19,8 +19,14 @@
              multipart: true, method: :post,
              html: {class: "form-inline center"} do |f| %>
 
-  <%= f.file_field :submission, html: {accept: "image/*;capture=camera"} %><br><br>
-  <%= f.submit %>
+    <div class="fileUpload btn btn-teal btn-block btn-lg">
+      <%= f.file_field :submission, class:'upload', accept: "image/*;capture=camera" %>
+      <span class="glyphicon glyphicon-camera"></span> Take Photo
+    </div>
+
+    <%= f.submit class:'btn btn-block btn-lg btn-orange'%>
+
+
 
 <% end %>
 
