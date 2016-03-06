@@ -12,8 +12,10 @@
  *
 
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import "bootstrap-sprockets", "bootstrap"
+
+.btn-teal
+  @include button-variant(white, #00B9AB, transparent)
 
 
 // .vertical-center {
@@ -24,24 +26,24 @@
 //   align-items: center;
 // }
 
-.field {
-    padding: 10px;
-}
-
-h3 {
-    text-align: center;
-}
-
-.actions {
-    margin: 3px;
-    background-color: transparent;
-    text-align: center;
-}
-
-.button-space {
-    padding: 5px;
-}
-
-#description {
-    padding: 15px;
-}
+//.field {
+//    padding: 10px;
+//}
+//
+//h3 {
+//    text-align: center;
+//}
+//
+//.actions {
+//    margin: 3px;
+//    background-color: transparent;
+//    text-align: center;
+//}
+//
+//.button-space {
+//    padding: 5px;
+//}
+//
+//#description {
+//    padding: 15px;
+//}
