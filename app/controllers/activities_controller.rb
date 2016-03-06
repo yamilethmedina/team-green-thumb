@@ -5,6 +5,7 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
+    @activities_by_minutes = @activities.group_by &:minutes
   end
 
   # GET /activities/1
