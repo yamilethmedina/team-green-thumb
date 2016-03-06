@@ -2,5 +2,12 @@
 
 <!--<h1>Progress</h1>-->
 
-<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<p><%= debug @activity %></p>
+
+<p>ACTIVITY LENGTH: <%= h @activity.minutes %></p>
+
+<p><%= h @activity.description %></p>
+
+<!--kids submit image, post to correct route -->
+
 <%= link_to 'Back', activities_path %>

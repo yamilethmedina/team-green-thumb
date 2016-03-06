@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305230556) do
+ActiveRecord::Schema.define(version: 20160306050028) do
 
   create_table "activities", force: :cascade do |t|
     t.datetime "created_at",              null: false
@@ -49,9 +49,16 @@ ActiveRecord::Schema.define(version: 20160305230556) do
   end
 
   create_table "progresses", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "activity_id"
+    t.integer  "user_id"
+    t.integer  "badge_id"
   end
+
+  add_index "progresses", ["activity_id"], name: "index_progresses_on_activity_id"
+  add_index "progresses", ["badge_id"], name: "index_progresses_on_badge_id"
+  add_index "progresses", ["user_id"], name: "index_progresses_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",                          null: false

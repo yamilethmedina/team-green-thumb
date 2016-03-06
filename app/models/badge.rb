@@ -7,5 +7,6 @@ class Badge < ActiveRecord::Base
 	
 	validates_attachment_content_type :badge_icon, :content_type => /\Aimage\/.*\Z/
   
-  has_and_belongs_to_many :activities    
+  has_and_belongs_to_many :activities
+  has_many :activities_badges
 end
