@@ -13,7 +13,7 @@ def seed_activities
   activities = HTTParty.get(endpoint)['activities']
 
   activities.each do |result|
-    
+
     activity = result[1]
 
     new_activity = Activity.new({
