@@ -28,6 +28,7 @@ group :production do
   gem 'pg' # Postgresql DB
   gem 'rails_12factor' # Heroku asset handler
 end
+
 group :development, :test do
   gem 'awesome_print'
   gem 'better_errors' # Better Errors
