@@ -12,10 +12,33 @@
  *
 
  */
+
+
 @import "bootstrap-sprockets", "bootstrap"
+
+$teal: #00B9AB
+
+.navbar-green-thumb
+  @extend .navbar-default
+  background-color: $teal
+  border: none
+  color: white
+  .navbar-brand
+    color: white
+  .navbar-brand-green-thumb
+    @extend .navbar-brand
+    float: none
+    line-height: inherit
+    margin-left: 16px // Compensating for Nav Toggle
+
+
 
 .btn-teal
   @include button-variant(white, #00B9AB, transparent)
+
+.btn-orange
+  @include button-variant(white, #F58D38, transparent)
+
 
 
 // .vertical-center {
