@@ -1,0 +1,19 @@
+<%= @result['images'].each do |result| %>
+
+
+  <div class="media">
+    <div class="media-left">
+      <%= link_to result['pageUrl'] do %>
+        <%= image_tag result['imageUrl'], class: 'media-object'%>
+      <% end %>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= result['title'] %></h4>
+      <p>
+        <%= result['id']%></p>
+      <p>
+        <%= result['plantNames'] %></p>
+    </div>
+  </div>
+<% end %>
