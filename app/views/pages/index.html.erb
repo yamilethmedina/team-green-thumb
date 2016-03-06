@@ -46,9 +46,19 @@
           <!--Logo -->
             <h1>The Green Thumb</h1>
          
-         <p><a class="btn btn-primary btn-lg" href="#" role="button">SIGN UP</a></p>
-         <p><a class="btn btn-primary btn-lg" href="#" role="button">LOG IN</a></p>
-         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+
+         <% if user_signed_in? %>
+         
+              <%= link_to('LOG OUT', destroy_user_session_path, :method => :delete, class: "btn btn-primary btn-lg") %>        
+           
+            <% else %>
+          
+              <div class="button-space"><%= link_to('LOG IN', new_user_session_path, class: "btn btn-primary btn-lg")  %></div>
+              <div class="button-space"><%= link_to('SIGN UP', new_user_registration_path, class: "btn btn-primary btn-lg")  %></div>
+      
+    <% end %>
+         <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">LOG IN</a></p>-->
+         
             </div>
         
         
