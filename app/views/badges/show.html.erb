@@ -1,7 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_badge_path(@badge) %> |
+<h3><%= @badge.badgetitle %></h3>
+
+<div class="col-md-4 col-md-offset-4 text-center">
+    
+<img src="http://s3.amazonaws.com/commendablekids.com.prod/badges/43/large.png" />
+
+<div id="description">
+<p><%= @badge.description %></p></div>
+
+ <div class="actions">
+    <button type="button" class="btn-block">Activity 1</button>
+    <button type="button" class="btn-block">Activity 2</button>
+    <button type="button" class="btn-block">Activity 3</button>
+</div>
+    
 <%= link_to 'Back', badges_path %>
-<%= image_tag @badge.badge_icon.url %>
-<%= image_tag @badge.badge_icon.url(:medium) %>
-<%= image_tag @badge.badge_icon.url(:thumb) %>

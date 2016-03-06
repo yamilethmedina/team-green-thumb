@@ -15,7 +15,7 @@
     <% @badges.each do |badge| %>
       <tr>
         <!--placeholder urls for image-->
-        <img src="http://s3.amazonaws.com/commendablekids.com.prod/badges/43/large.png" height="100" width="100" /> <strong> <%= badge.badgetitle %> </strong><br>
+        <img src="http://s3.amazonaws.com/commendablekids.com.prod/badges/43/large.png" height="100" width="100" /> <strong> <%= badge.badgetitle %> </strong> <%= link_to 'More Info', badge %><br>
         
         
       </tr>
