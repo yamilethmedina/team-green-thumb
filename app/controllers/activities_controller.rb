@@ -4,8 +4,12 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-    @activities = Activity.all
-    @activities_by_minutes = @activities.group_by &:minutes
+    
+    if params[:minutes]
+      @activities = Activity.where(minutes:params[:minutes])
+    else
+      @activities = Activity.all  
+    end
   end
 
   # GET /activities/1
