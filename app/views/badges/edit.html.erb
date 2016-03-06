@@ -4,3 +4,7 @@
 
 <%= link_to 'Show', @badge %> |
 <%= link_to 'Back', badges_path %>
+
+<%= form_for @badge, url: badges_path, html: { multipart: true } do |form| %>
+  <%= form.file_field :badge_icon %>
+<% end %>
