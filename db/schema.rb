@@ -32,9 +32,6 @@ ActiveRecord::Schema.define(version: 20160306050028) do
     t.integer "badge_id"
   end
 
-  add_index "activities_badges", ["activity_id"], name: "index_activities_badges_on_activity_id"
-  add_index "activities_badges", ["badge_id"], name: "index_activities_badges_on_badge_id"
-
   create_table "badges", force: :cascade do |t|
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
