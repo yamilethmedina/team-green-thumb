@@ -2,3 +2,6 @@
 
 <%= link_to 'Edit', edit_badge_path(@badge) %> |
 <%= link_to 'Back', badges_path %>
+<%= image_tag @badge.badge_icon.url %>
+<%= image_tag @badge.badge_icon.url(:medium) %>
+<%= image_tag @badge.badge_icon.url(:thumb) %>
